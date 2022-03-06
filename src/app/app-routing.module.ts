@@ -7,6 +7,7 @@ import { LoginComponent } from './account/login/login.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { AulasDetalheComponent } from './aulas-detalhe/aulas-detalhe.component';
 import { AulasComponent } from './aulas/aulas.component';
+import { DiretorNaoEncontradorComponent } from './diretor-nao-encontrador/diretor-nao-encontrador.component';
 import { DiretoresDetalheComponent } from './diretores-detalhe/diretores-detalhe.component';
 import { DiretoresComponent } from './diretores/diretores.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path: 'quiz',
     component: QuizComponent
+  },
+  {
+    path: 'naoEncontrado',
+    component: DiretorNaoEncontradorComponent
   },
 
 

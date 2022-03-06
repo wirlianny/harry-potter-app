@@ -8,7 +8,7 @@
  <button routerLink="" mat-icon aria-hidden="false" aria-label="Example home icon">
    <mat-icon>home</mat-icon>
  </button>
- <a class="diretores" routerLink="/diretores">Diretores</a>
+ <a class="diretores" routerLink="/diretores" [queryParams]="{pagina:1}">Diretores</a>
  <a class="diretores" [routerLink]="['diretores', idDiretores.value]">Diretores com id</a>
  <a class="aulas" routerLink="/aulas">Aulas</a>
  <a class="quiz" routerLink="/quiz">Quiz</a>

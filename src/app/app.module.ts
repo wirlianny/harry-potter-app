@@ -11,9 +11,12 @@ import { HomeComponent } from './layout/home/home.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { DiretoresDetalheComponent } from './diretores-detalhe/diretores-detalhe.component';
 import { AulasDetalheComponent } from './aulas-detalhe/aulas-detalhe.component';
-
+import { CommonModule } from '@angular/common';
+import { DiretoresDetalheComponent } from './diretores-detalhe/diretores-detalhe.component';
+import { DiretoresComponent } from './diretores/diretores.component';
+import { DiretoresServices } from './diretores/diretores.service';
+import { DiretorNaoEncontradorComponent } from './diretor-nao-encontrador/diretor-nao-encontrador.component';
 
 
 @NgModule({
@@ -24,21 +27,28 @@ import { AulasDetalheComponent } from './aulas-detalhe/aulas-detalhe.component';
     HomeComponent,
     AuthenticationComponent,
     DiretoresDetalheComponent,
-    AulasDetalheComponent, ],
+    AulasDetalheComponent,
+    DiretoresComponent,
+    DiretorNaoEncontradorComponent,
+
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    CommonModule,
+
 
   ],
-  providers: [],
+  providers: [DiretoresServices],
   bootstrap: [AppComponent],
 
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
+
 })
 export class AppModule { }
