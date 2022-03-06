@@ -1,9 +1,10 @@
+import { AlunosModule } from './alunos/alunos.module';
+import { DiretoresModule } from './diretores/diretores.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
@@ -13,10 +14,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { AulasDetalheComponent } from './aulas-detalhe/aulas-detalhe.component';
 import { CommonModule } from '@angular/common';
-import { DiretoresDetalheComponent } from './diretores-detalhe/diretores-detalhe.component';
-import { DiretoresComponent } from './diretores/diretores.component';
-import { DiretoresServices } from './diretores/diretores.service';
-import { DiretorNaoEncontradorComponent } from './diretor-nao-encontrador/diretor-nao-encontrador.component';
+//import { DiretoresDetalheComponent } from './diretores/diretores-detalhe/diretores-detalhe.component';
+//import { DiretoresComponent } from './diretores/diretores.component';
+//import { DiretoresServices } from './diretores/diretores.service';
+//import { DiretorNaoEncontradorComponent } from './diretores/diretor-nao-encontrador/diretor-nao-encontrador.component';
 
 
 @NgModule({
@@ -26,10 +27,8 @@ import { DiretorNaoEncontradorComponent } from './diretor-nao-encontrador/direto
     CreateAccountComponent,
     HomeComponent,
     AuthenticationComponent,
-    DiretoresDetalheComponent,
     AulasDetalheComponent,
-    DiretoresComponent,
-    DiretorNaoEncontradorComponent,
+
 
   ],
   imports: [
@@ -40,10 +39,11 @@ import { DiretorNaoEncontradorComponent } from './diretor-nao-encontrador/direto
     MatToolbarModule,
     MatIconModule,
     CommonModule,
-
+    DiretoresModule,
+    AlunosModule
 
   ],
-  providers: [DiretoresServices],
+  //providers: [DiretoresServices],
   bootstrap: [AppComponent],
 
   schemas: [

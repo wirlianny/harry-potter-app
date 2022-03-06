@@ -7,9 +7,9 @@ import { LoginComponent } from './account/login/login.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { AulasDetalheComponent } from './aulas-detalhe/aulas-detalhe.component';
 import { AulasComponent } from './aulas/aulas.component';
-import { DiretorNaoEncontradorComponent } from './diretor-nao-encontrador/diretor-nao-encontrador.component';
-import { DiretoresDetalheComponent } from './diretores-detalhe/diretores-detalhe.component';
-import { DiretoresComponent } from './diretores/diretores.component';
+//import { DiretorNaoEncontradorComponent } from './diretores/diretor-nao-encontrador/diretor-nao-encontrador.component';
+//import { DiretoresDetalheComponent } from './diretores/diretores-detalhe/diretores-detalhe.component';
+//import { DiretoresComponent } from './diretores/diretores.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 import { HomeComponent } from './layout/home/home.component';
@@ -23,13 +23,17 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'login',
+    component: LoginComponent
+  },
+  /* {
     path: 'diretores',
     component: DiretoresComponent
   },
   {
     path: 'diretores/:id',
     component: DiretoresDetalheComponent
-  },
+  }, */
   {
     path: 'aulas',
     component: AulasComponent
@@ -46,10 +50,10 @@ const routes: Routes = [
     path: 'quiz',
     component: QuizComponent
   },
-  {
+  /* {
     path: 'naoEncontrado',
     component: DiretorNaoEncontradorComponent
-  },
+  }, */
 
 
   { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -72,7 +76,6 @@ const routes: Routes = [
 
 
 ];
-
 
 
 @NgModule({
