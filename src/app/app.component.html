@@ -1,15 +1,22 @@
 <body class="body">
 <mat-toolbar color="primary" imgsrc="imagePath1">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>group_add</mat-icon>
  </button>
 
  <span class="example-spacer"></span>
- <button mat-icon aria-hidden="false" aria-label="Example home icon">
+ <button routerLink="" mat-icon aria-hidden="false" aria-label="Example home icon">
    <mat-icon>home</mat-icon>
  </button>
+ <a class="diretores" routerLink="/diretores">Diretores</a>
+ <a class="diretores" [routerLink]="['diretores', idDiretores.value]">Diretores com id</a>
+ <a class="aulas" routerLink="/aulas">Aulas</a>
+ <a class="quiz" routerLink="/quiz">Quiz</a>
 </mat-toolbar>
+
+<p>Pesquisa</p><input #idDiretores>
 </body>
+
 
 <router-outlet></router-outlet>
 

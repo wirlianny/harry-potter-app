@@ -11,6 +11,8 @@ import { HomeComponent } from './layout/home/home.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { DiretoresDetalheComponent } from './diretores-detalhe/diretores-detalhe.component';
+import { AulasDetalheComponent } from './aulas-detalhe/aulas-detalhe.component';
 
 
 
@@ -20,7 +22,9 @@ import {MatIconModule} from '@angular/material/icon';
     LoginComponent,
     CreateAccountComponent,
     HomeComponent,
-    AuthenticationComponent, ],
+    AuthenticationComponent,
+    DiretoresDetalheComponent,
+    AulasDetalheComponent, ],
   imports: [
     BrowserModule,
     AppRoutingModule,
