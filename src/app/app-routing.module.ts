@@ -1,10 +1,17 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { LoginComponent } from './account/login/login.component';
 import { AuthGuard } from './account/shared/auth.guard';
+import { AulasComponent } from './aulas/aulas.component';
+import { DiretoresComponent } from './diretores/diretores.component';
+import { HomepageComponent } from './homepage/homepage.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 import { HomeComponent } from './layout/home/home.component';
+import { QuizComponent } from './quiz/quiz.component';
+
 
 const routes: Routes = [
   {
@@ -12,7 +19,25 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [AuthGuard]
   },
+  {
+    path: 'diretores',
+    component: DiretoresComponent
+  },
+  {
+    path: 'aulas',
+    component: AulasComponent
+  },
+  {
+    path: 'homepage',
+    component: HomepageComponent
+  },
+  {
+    path: 'quiz',
+    component: QuizComponent
+  },
 
+
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
 
   {
     path: '',
@@ -30,10 +55,16 @@ const routes: Routes = [
     ]
   }
 
+
 ];
 
+
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

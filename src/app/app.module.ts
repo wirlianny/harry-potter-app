@@ -9,6 +9,10 @@ import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { HomeComponent } from './layout/home/home.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -16,15 +20,14 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
     LoginComponent,
     CreateAccountComponent,
     HomeComponent,
-    AuthenticationComponent,
-
-
-  ],
+    AuthenticationComponent, ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule
 
   ],
   providers: [],
