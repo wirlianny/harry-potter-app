@@ -1,5 +1,4 @@
 import { AuthService } from './account/login/auth.service';
-import { AlunosModule } from './alunos/alunos.module';
 import { DiretoresModule } from './diretores/diretores.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +15,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { AulasDetalheComponent } from './aulas-detalhe/aulas-detalhe.component';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { QuizComponent } from './quiz/quiz.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     AuthenticationComponent,
     AulasDetalheComponent,
+    QuizComponent,
 
 
   ],
@@ -36,8 +38,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatIconModule,
     CommonModule,
     DiretoresModule,
-    AlunosModule,
-    NgbModule
+    NgbModule,
+
 
   ],
   providers: [AuthService],
