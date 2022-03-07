@@ -1,14 +1,10 @@
-.example-icon{
-  margin: 10px;
-
-}
-
-/* .body {
+.body {
   background-image: url(../assets/Hogwarts.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-} */
+  background-color: #082767;
+}
 
 
 
@@ -17,26 +13,54 @@
 
 }
 
+.loginbtn{
+  font-style: normal;
+  font-family: arial;
+  margin: 15px;
+  font-size: 15px;
+}
+
+.home{
+  font-style: normal;
+  font-family: arial;
+  margin: 15px;
+  font-size: 15px;
+}
+
 .diretores {
   font-style: normal;
   font-family: arial;
-  margin: 10px;
+  margin: 15px;
   font-size: 15px;
-  color: white
+
 }
 
 .aulas {
   font-style: normal;
   font-family: arial;
-  margin: 10px;
+  margin: 15px;
   font-size: 15px;
-  color: white
+
+}
+
+.alunos {
+  font-style: normal;
+  font-family: arial;
+  margin: 15px;
+  font-size: 15px;
+}
+
+.diretoresid {
+  font-style: normal;
+  font-family: arial;
+  margin: 15px;
+  font-size: 14px;
 }
 
 .quiz {
   font-style: normal;
   font-family: arial;
-  margin: 10px;
+  margin: 15px;
   font-size: 15px;
-  color: white
+
 }

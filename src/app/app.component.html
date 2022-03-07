@@ -1,25 +1,29 @@
 <body class="body">
-<mat-toolbar color="primary" imgsrc="imagePath1">
-  <button routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>group_add</mat-icon>
+<mat-toolbar color="primary">
+  <button class="loginbtn" routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    Login
  </button>
 
  <span class="example-spacer"></span>
- <button routerLink="" mat-icon aria-hidden="false" aria-label="Example home icon">
-   <mat-icon>home</mat-icon>
+ <button  class="home" routerLink="" mat-icon aria-hidden="false" aria-label="Example home icon">
+   Home
  </button>
- <a class="diretores" routerLink="/diretores" [queryParams]="{pagina:1}">Diretores</a>
- <a class="diretores" routerLink="/alunos">Alunos</a>
- <a class="diretores" [routerLink]="['diretores', idDiretores.value]">Diretores com id</a>
- <a class="aulas" routerLink="/aulas">Aulas</a>
- <a class="quiz" routerLink="/quiz">Quiz</a>
+ <button class="diretores" routerLink="/diretores" [queryParams]="{pagina:1}">Diretores</button>
+ <button class="alunos" routerLink="/alunos">Alunos</button>
+ <!-- <button class="diretoresid" [routerLink]="['diretores', idDiretores.value]">Diretores com id</button> -->
+ <button class="aulas" routerLink="/aulas">Aulas</button>
+ <button class="quiz" routerLink="/quiz">Quiz</button>
 </mat-toolbar>
 
-<p>Pesquisa</p><input #idDiretores>
+<div class="container">
+  <!-- <p>Pesquisa</p><input #idDiretores> -->
+     <router-outlet></router-outlet>
+
+</div>
 </body>
 
 
-<router-outlet></router-outlet>
+
 
 
 

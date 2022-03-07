@@ -1,12 +1,21 @@
 <p>Página: {{pagina}}</p>
 
-<div class="collection">
+<!-- <div>
   <a class="collection-item"
   *ngFor="let diretores of diretores"
-  [routerLink]="['/diretores', diretores.id]">
+  [routerLink]="['/diretores', diretores.id]"><br>
   {{diretores.nome}}
   </a>
  </div>
+ -->
 
 
- <button (click)="proximaPagina()"></button>
+ <button type="button" class="btn" (click)="proximaPagina">Próximo</button>
+
+
+ <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action" *ngFor="let diretores of diretores" [routerLink]="['/diretores', diretores.id]" >{{diretores.nome}}</a>
+</div>
+
+
+

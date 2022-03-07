@@ -1,6 +1,8 @@
+import { AuthService } from './auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from '../shared/account.service';
+import { Usuario } from './usuario';
 
 @Component({
   selector: 'cf-login',

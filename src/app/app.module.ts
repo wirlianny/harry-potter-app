@@ -1,3 +1,4 @@
+import { AuthService } from './account/login/auth.service';
 import { AlunosModule } from './alunos/alunos.module';
 import { DiretoresModule } from './diretores/diretores.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -14,12 +15,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { AulasDetalheComponent } from './aulas-detalhe/aulas-detalhe.component';
 import { CommonModule } from '@angular/common';
-//import { DiretoresDetalheComponent } from './diretores/diretores-detalhe/diretores-detalhe.component';
-//import { DiretoresComponent } from './diretores/diretores.component';
-//import { DiretoresServices } from './diretores/diretores.service';
-//import { DiretorNaoEncontradorComponent } from './diretores/diretor-nao-encontrador/diretor-nao-encontrador.component';
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,9 +36,11 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     CommonModule,
     DiretoresModule,
-    AlunosModule
+    AlunosModule,
+    NgbModule
 
   ],
+  providers: [AuthService],
   //providers: [DiretoresServices],
   bootstrap: [AppComponent],
 
