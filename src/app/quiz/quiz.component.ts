@@ -48,4 +48,6 @@ export class QuizComponent implements OnInit {
       result!.textContent="Tente novamente ano que vem"
     }
   }
+
 }
+

@@ -6,36 +6,44 @@
 </head>
 <body>
 <form name="quiz" id="quiz">
+  <div class="container bg-light-blue py-5" style="font-family: cursive;">
+    <ol>
+      <li>Responda as questões de acordo com o que você acredita ser verdade.</li>
+      <li>São 4 questões para que o Chapéu Seletor sortei você a uma casa.</li>
+      <li>Recarregar a página irá resertar suas respostas. Cuidado!</li>
+    </ol>
+  </div>
+
   <div>
     <p>1. Pergunta?</p>
-    <p><input type="radio" name="question1" value="1" ngModel>A.1</p>
-    <p><input type="radio" name="question1" value="2" ngModel>B.2</p>
-    <p><input type="radio" name="question1" value="3" ngModel>C.3</p>
-    <p><input type="radio" name="question1" value="4" ngModel>D.4</p>
+    <p><input type="radio" name="question1" id="a1" value="1" ngModel>A.1</p>
+    <p><input type="radio" name="question1" id="b1" value="2" ngModel>B.2</p>
+    <p><input type="radio" name="question1" id ="c1" value="3" ngModel>C.3</p>
+    <p><input type="radio" name="question1" id="d1 "value="4" ngModel>D.4</p>
   </div>
 
   <div>
     <p>2. Pergunta?</p>
-    <p><input type="radio" name="question2" value="5" ngModel>A.5</p>
-    <p><input type="radio" name="question2" value="6" ngModel>B.6</p>
-    <p><input type="radio" name="question2" value="7" ngModel>C.7</p>
-    <p><input type="radio" name="question2" value="8" ngModel>D.8</p>
+    <p><input type="radio" name="question2" id="a2" value="5" ngModel>A.5</p>
+    <p><input type="radio" name="question2" id="b2" value="6" ngModel>B.6</p>
+    <p><input type="radio" name="question2" id="c2" value="7" ngModel>C.7</p>
+    <p><input type="radio" name="question2" id="d2" value="8" ngModel>D.8</p>
   </div>
 
   <div>
     <p>3. Pergunta?</p>
-    <p><input type="radio" name="question3" value="9" ngModel>A.9</p>
-    <p><input type="radio" name="question3" value="10" ngModel>B.10</p>
-    <p><input type="radio" name="question3" value="11" ngModel>C.11</p>
-    <p><input type="radio" name="question3" value="12" ngModel>D.13</p>
+    <p><input type="radio" name="question3" id="a3" value="9" ngModel>A.9</p>
+    <p><input type="radio" name="question3" id="b3" value="10" ngModel>B.10</p>
+    <p><input type="radio" name="question3" id ="c3" value="11" ngModel>C.11</p>
+    <p><input type="radio" name="question3" id="d3" value="12" ngModel>D.13</p>
   </div>
 
   <div>
     <p>4. Pergunta?</p>
-    <p><input type="radio" name="question4" value="14" ngModel>A.14</p>
-    <p><input type="radio" name="question4" value="15" ngModel>B.15</p>
-    <p><input type="radio" name="question4" value="16" ngModel>C.16</p>
-    <p><input type="radio" name="question4" value="17" ngModel>D.18</p>
+    <p><input type="radio" name="question4" id="a4"  value="14" ngModel>A.14</p>
+    <p><input type="radio" name="question4" id="b4" value="15" ngModel>B.15</p>
+    <p><input type="radio" name="question4" id="c4" value="16" ngModel>C.16</p>
+    <p><input type="radio" name="question4" id="d4" value="17" ngModel>D.18</p>
   </div>
 
 
@@ -46,3 +54,4 @@
 <p id="result"></p>
 </body>
 </html>
+
