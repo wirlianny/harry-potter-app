@@ -1,3 +1,4 @@
+import { QuestoesService } from './../service/questoes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,17 +7,65 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz.component.scss']
 })
 export class QuizComponent implements OnInit {
+  public name: string="";
+  public questionList: any = [];
+  public currentQuestion: number = 0;
+  correctAnswer: number = 0;
+  incorrectAnswer: number = 0;
+  progress: string = "0";
   quiz: any;
 
 
 
-  constructor() { }
+  constructor(private questaoServidor: QuestoesService) { }
 
   ngOnInit(): void {
+    this.name = localStorage.getItem("name")!;
+    this.getAllQuestions();
+  }
+
+  getAllQuestions(){
+    this.questaoServidor.getQuestionJson().subscribe(res=>{
+      this.questionList = res.questions;
+    })
+
+  }
+
+  proximaQuestao(){
+    this.currentQuestion++;
+  }
+
+  questaoAnterior(){
+    this.currentQuestion--;
+  }
+
+  answer(currentQno: number, option: any){
+    if(option.correct){
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+  }
+
+  resetQuestoes(){
+    this.getAllQuestions();
+    //this.points = 0;
+    this.currentQuestion=0;
+    this.progress = "0";
+  }
+
+  getProgress(){
+    this.progress = ((this.currentQuestion/this.questionList.length)*100).toString();
+    return this.progress;
   }
 
 
-  check(){
+
+
+  /* check(){
     var c = 0;
     var q1 = this.quiz.nativeElement.question1.value
     var q2 = this.quiz.nativeElement.question2.value
@@ -47,7 +96,7 @@ export class QuizComponent implements OnInit {
     } else {
       result!.textContent="Tente novamente ano que vem"
     }
-  }
+  } */
 
 }
 

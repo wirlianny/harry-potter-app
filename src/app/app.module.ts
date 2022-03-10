@@ -16,6 +16,7 @@ import { AulasDetalheComponent } from './aulas-detalhe/aulas-detalhe.component';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { QuizComponent } from './quiz/quiz.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,7 @@ import { QuizComponent } from './quiz/quiz.component';
     HomeComponent,
     AuthenticationComponent,
     AulasDetalheComponent,
-    QuizComponent,
-
-
+    QuizComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +38,7 @@ import { QuizComponent } from './quiz/quiz.component';
     CommonModule,
     DiretoresModule,
     NgbModule,
+    HttpClientModule
 
 
   ],

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'cf-homepage',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('name') nameKey!: ElementRef;
+
+  constructor() {}
+
+
 
   ngOnInit(): void {
   }
+
+  comecarChapeu(){
+    localStorage.setItem("name", this.nameKey.nativeElement.value)
+  }
+
 
 }
