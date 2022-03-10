@@ -13,6 +13,7 @@ export class QuizComponent implements OnInit {
   correctAnswer: number = 0;
   incorrectAnswer: number = 0;
   progress: string = "0";
+  public points: number = 0;
   quiz: any;
 
 
@@ -39,8 +40,9 @@ export class QuizComponent implements OnInit {
     this.currentQuestion--;
   }
 
-  answer(currentQno: number, option: any){
-    if(option.correct){
+  answer(currentQuestion: number, option: any){
+    if(option.alternative1){
+      this.points+= 10;
       this.currentQuestion++;
       this.correctAnswer++;
       this.getProgress();
@@ -48,6 +50,143 @@ export class QuizComponent implements OnInit {
       this.currentQuestion++;
       this.getProgress();
     }
+    if(option.alternative2){
+      this.points+= 20;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative3){
+      this.points+= 30;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative4){
+      this.points+= 40;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative5){
+      this.points+= 50;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative6){
+      this.points+= 60;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative7){
+      this.points+= 70;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative8){
+      this.points+= 80;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative9){
+      this.points+= 80;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative10){
+      this.points+= 80;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative11){
+      this.points+= 80;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative12){
+      this.points+= 80;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative13){
+      this.points+= 80;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative14){
+      this.points+= 80;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative15){
+      this.points+= 80;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative16){
+      this.points+= 80;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.getProgress();
+    }
+
+
   }
 
   resetQuestoes(){
