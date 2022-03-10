@@ -40,146 +40,146 @@ export class QuizComponent implements OnInit {
     this.currentQuestion--;
   }
 
-  answer(currentQuestion: number, option: any){
+  answer(currentQno: number, option: any){
     if(option.alternative1){
       this.points+= 10;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative2){
+    } */
+    else if(option.alternative2){
       this.points+= 20;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative3){
+    } */
+    else if(option.alternative3){
       this.points+= 30;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative4){
+    } */
+    else if(option.alternative4){
       this.points+= 40;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative5){
+    } */
+    else if(option.alternative5){
       this.points+= 50;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative6){
+    } */
+    else if(option.alternative6){
       this.points+= 60;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative7){
+    } */
+    else if(option.alternative7){
       this.points+= 70;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative8){
+    } */
+    else if(option.alternative8){
       this.points+= 80;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative9){
+    } */
+    else if(option.alternative9){
       this.points+= 80;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative10){
+    } */
+    else if(option.alternative10){
       this.points+= 80;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative11){
+    } */
+    else if(option.alternative11){
       this.points+= 80;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative12){
+    } */
+    else if(option.alternative12){
       this.points+= 80;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative13){
+    } */
+    else if(option.alternative13){
       this.points+= 80;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative14){
+    } */
+    else if(option.alternative14){
       this.points+= 80;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative15){
+    } */
+    else if(option.alternative15){
       this.points+= 80;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
-    if(option.alternative16){
+    } */
+    else if(option.alternative16){
       this.points+= 80;
       this.currentQuestion++;
-      this.correctAnswer++;
+      //this.correctAnswer++;
       this.getProgress();
     } else {
       this.currentQuestion++;

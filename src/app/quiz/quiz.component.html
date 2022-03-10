@@ -7,7 +7,7 @@
             <span style="font-style: italic;">Bem-vindo (a),  {{name}} </span>
           </div>
           <div class="d-flex justify-content-around py-3">
-            <div class="score">
+            <div hidden class="score">
               <h5>{{points}} Points</h5>
             </div>
           </div>
@@ -34,7 +34,7 @@
           <div class="d-flex justify-content-between">
             <button [disabled]="currentQuestion===0" class="btn" (click)="questaoAnterior()"><i class="fa text-primary fa-chevron-left fa-3x" aria-hidden="true">Left</i></button>
             <button class="btn" (click)="resetQuestoes()"><i class="fa-solid fa-arrows-rotate text-primary fa-3x" aria-hidden="true"></i>Recarregar</button>
-            <button [disabled]="currentQuestion===8" class="btn" (click)="proximaQuestao()"><i class="fa text-primary fa-chevron-right fa-3x" aria-hidden="true">Right</i></button>
+            <button [disabled]="currentQuestion===3" class="btn" (click)="proximaQuestao()"><i class="fa text-primary fa-chevron-right fa-3x" aria-hidden="true">Right</i></button>
           </div>
         </div>
       </div>
