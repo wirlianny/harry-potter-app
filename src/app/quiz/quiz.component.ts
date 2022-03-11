@@ -48,153 +48,91 @@ export class QuizComponent implements OnInit {
   answer(currentQno: number, option: any){
     if(currentQno === this.questionList.length){
       this.quizCompleted = true;
-      //this.resultadoCasa();
+      this.resultadoCasa();
     }
 
-    else if(option.alternative1){
-      this.points+= 1;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative2){
-      this.points+= 2;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative3){
-      this.points+= 3;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative4){
-      this.points+= 4;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative5){
-      this.points+= 5;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative6){
-      this.points+= 6;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative7){
-      this.points+= 7;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative8){
-      this.points+= 8;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative9){
-      this.points+= 9;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative10){
+    if(option.alternative1){
       this.points+= 10;
       this.currentQuestion++;
-      //this.correctAnswer++;
       this.getProgress();
-    } /* else {
+    }
+    if(option.alternative2){
+      this.points+= 25;
       this.currentQuestion++;
       this.getProgress();
-    } */
-    else if(option.alternative11){
-      this.points+= 11;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
+    }
+    if(option.alternative3){
+      this.points+= 35;
       this.currentQuestion++;
       this.getProgress();
-    } */
-    else if(option.alternative12){
-      this.points+= 12;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
+    }
+    if(option.alternative4){
+      this.points+= 45;
       this.currentQuestion++;
       this.getProgress();
-    } */
-    else if(option.alternative13){
-      this.points+= 13;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
+    }
+    if(option.alternative5){
+      this.points+= 60;
       this.currentQuestion++;
       this.getProgress();
-    } */
-    else if(option.alternative14){
-      this.points+= 14;
+    }
+    if(option.alternative6){
+      this.points+= 75;
       this.currentQuestion++;
-      //this.correctAnswer++;
+
       this.getProgress();
-    } /* else {
+    }
+    if(option.alternative7){
+      this.points+= 85;
       this.currentQuestion++;
+
       this.getProgress();
-    } */
-    else if(option.alternative15){
-      this.points+= 15;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
-      this.currentQuestion++;
-      this.getProgress();
-    } */
-    else if(option.alternative16){
-      this.points+= 16;
-      this.currentQuestion++;
-      //this.correctAnswer++;
-      this.getProgress();
-    } /* else {
+    }
+    if(option.alternative8){
+      this.points+= 100;
       this.currentQuestion++;
       this.getProgress();
-    } */
+    }
+    if(option.alternative9){
+      this.points+= 200;
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative10){
+      this.points+= 250;
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative11){
+      this.points+= 350;
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative12){
+      this.points+= 450;
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative13){
+      this.points+= 550;
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative14){
+      this.points+= 650;
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative15){
+      this.points+= 750;
+      this.currentQuestion++;
+      this.getProgress();
+    }
+    if(option.alternative16){
+      this.points+= 850;
+      this.currentQuestion++;
+      this.getProgress();
+    }
 
 
   }
@@ -212,20 +150,22 @@ export class QuizComponent implements OnInit {
   }
 
   resultadoCasa(){
-    var result = document.getElementById('result');
 
-    if(this.points <= 16){
-     result!.textContent = "Sua casa é a Grifinória"
+
+    if(this.points <= 820){
+     return "Grifinória"
     }
 
-    else if (this.points <= 20){
-      result!.textContent = "Sua casa é a Sonserina"
+    else if (this.points <= 1000){
+      return "Sonserina"
     }
-    else if(this.points <= 22) {
-      result!.textContent = "Sua casa é a Lufa-lufa"
+    else if(this.points <= 1220) {
+      return "Lufa-lufa"
     }
-    else if (this.points <= 25){
-      result!.textContent = "Sua casa é a Corvinal"
+    else if (this.points <= 1495){
+      return "Corvinal"
+    } else {
+      return null
     }
   }
 
