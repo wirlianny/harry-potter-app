@@ -1,4 +1,4 @@
-<div class="container mt-2"></div>
+<div class="container mt-2">
       <div class="card">
         <div class="d-flex justify-content-between p-3">
           <img src="https://criticalhits.com.br/wp-content/uploads/2021/10/chapeu-seletor-hp.jpg" width="200" alt="logo">
@@ -6,12 +6,13 @@
             <h4 style="font-family:cursive;"> Chapéu Seletor</h4>
             <span style="font-style: italic;">Bem-vindo (a),  {{name}} </span>
           </div>
+        </div>
+         <ng-container *ngIf="!quizCompleted">
           <div class="d-flex justify-content-around py-3">
-            <div hidden class="score">
+            <div class="score">
               <h5>{{points}} Points</h5>
             </div>
           </div>
-        </div>
         <div class="question-remain p-2">
           <span style="font-style: italic;">Questão {{currentQuestion+1}} of {{questionList.length}}</span>
           <div class="progress mb-3">
@@ -37,7 +38,18 @@
             <button [disabled]="currentQuestion===3" class="btn" (click)="proximaQuestao()"><i class="fa text-primary fa-chevron-right fa-3x" aria-hidden="true">Right</i></button>
           </div>
         </div>
+         </ng-container>
+
+         <ng-container *ngIf="quizCompleted">
+           <div class="row d-flex justify-content-between">
+             <div class="resul text-center col-md-6 col-sm-12">
+               <p id="result">Resultado: {{resultadoCasa()}} </p>
+             </div>
+           </div>
+         </ng-container>
+
       </div>
+  </div>
 
 
 

@@ -1,6 +1,7 @@
 import { QuestoesService } from './../service/questoes.service';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'cf-quiz',
   templateUrl: './quiz.component.html',
@@ -14,7 +15,9 @@ export class QuizComponent implements OnInit {
   incorrectAnswer: number = 0;
   progress: string = "0";
   public points: number = 0;
-  quiz: any;
+  quizCompleted: boolean = false;
+  //public casas: Array = ["Grifinória", "Sonserina", "Corvinal", "Lufa-lufa"];
+
 
 
 
@@ -40,9 +43,16 @@ export class QuizComponent implements OnInit {
     this.currentQuestion--;
   }
 
+
+
   answer(currentQno: number, option: any){
-    if(option.alternative1){
-      this.points+= 10;
+    if(currentQno === this.questionList.length){
+      this.quizCompleted = true;
+      //this.resultadoCasa();
+    }
+
+    else if(option.alternative1){
+      this.points+= 1;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -51,7 +61,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative2){
-      this.points+= 20;
+      this.points+= 2;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -60,7 +70,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative3){
-      this.points+= 30;
+      this.points+= 3;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -69,7 +79,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative4){
-      this.points+= 40;
+      this.points+= 4;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -78,7 +88,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative5){
-      this.points+= 50;
+      this.points+= 5;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -87,7 +97,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative6){
-      this.points+= 60;
+      this.points+= 6;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -96,7 +106,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative7){
-      this.points+= 70;
+      this.points+= 7;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -105,7 +115,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative8){
-      this.points+= 80;
+      this.points+= 8;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -114,7 +124,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative9){
-      this.points+= 80;
+      this.points+= 9;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -123,7 +133,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative10){
-      this.points+= 80;
+      this.points+= 10;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -132,7 +142,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative11){
-      this.points+= 80;
+      this.points+= 11;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -141,7 +151,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative12){
-      this.points+= 80;
+      this.points+= 12;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -150,7 +160,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative13){
-      this.points+= 80;
+      this.points+= 13;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -159,7 +169,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative14){
-      this.points+= 80;
+      this.points+= 14;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -168,7 +178,7 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative15){
-      this.points+= 80;
+      this.points+= 15;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
@@ -177,21 +187,21 @@ export class QuizComponent implements OnInit {
       this.getProgress();
     } */
     else if(option.alternative16){
-      this.points+= 80;
+      this.points+= 16;
       this.currentQuestion++;
       //this.correctAnswer++;
       this.getProgress();
-    } else {
+    } /* else {
       this.currentQuestion++;
       this.getProgress();
-    }
+    } */
 
 
   }
 
   resetQuestoes(){
     this.getAllQuestions();
-    //this.points = 0;
+    this.points = 0;
     this.currentQuestion=0;
     this.progress = "0";
   }
@@ -200,6 +210,25 @@ export class QuizComponent implements OnInit {
     this.progress = ((this.currentQuestion/this.questionList.length)*100).toString();
     return this.progress;
   }
+
+  resultadoCasa(){
+    var result = document.getElementById('result');
+
+    if(this.points <= 16){
+     result!.textContent = "Sua casa é a Grifinória"
+    }
+
+    else if (this.points <= 20){
+      result!.textContent = "Sua casa é a Sonserina"
+    }
+    else if(this.points <= 22) {
+      result!.textContent = "Sua casa é a Lufa-lufa"
+    }
+    else if (this.points <= 25){
+      result!.textContent = "Sua casa é a Corvinal"
+    }
+  }
+
 
 
 
