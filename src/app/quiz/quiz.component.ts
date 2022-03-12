@@ -156,15 +156,15 @@ export class QuizComponent implements OnInit {
      return "Bem-vindo a casa Grifinória!!"
     }
 
-    else if (this.points <= 1000){
+    else if (this.points > 820 && this.points <= 1000){
       (<HTMLImageElement>document.querySelector("img")).src="http://pm1.narvii.com/7350/2f76b6a123c86007ce077676c2d0bdb2aa7bb558r1-736-1308v2_uhq.jpg"
       return "Bem-vindo a casa Sonserina!!"
     }
-    else if(this.points <= 1220) {
+    else if(this.points > 1000 && this.points <= 1220) {
       (<HTMLImageElement>document.querySelector("img")).src="https://http2.mlstatic.com/D_NQ_NP_720746-MLB43524083051_092020-O.jpg"
       return "Bem-vindo a casa Lufa-lufa!!"
     }
-    else if (this.points <= 1495){
+    else if ( this.points > 1220 && this.points <= 1495){
       (<HTMLImageElement>document.querySelector("img")).src="https://pbs.twimg.com/profile_images/1038240488954970112/YbPjAxYI_400x400.jpg"
       return "Bem-vindo a casa Corvinal!!"
     } else {
