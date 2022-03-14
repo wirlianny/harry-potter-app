@@ -1,4 +1,38 @@
+.list-group {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  display: flex;
+}
 
+.list-group-item {
+  padding: 25px;
+  flex: 1;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  margin: .5em;
+  border-radius: 4px;
+  display: flex;
+  align-items: stretch;
+  height: 1.8em;
+
+}
+
+.list-group-item:hover{
+  color: #2c87b4;
+  background-color: #e6e6e6;
+  left: .1em;
+}
+
+.list-group-item:active{
+  background-color: #525252;
+  color: #fafafa;
+}
+
+
+/*
 .collection-item {
   margin: 0 0 2em 0;
   list-style-type: none;
@@ -64,3 +98,4 @@
 .collection-item .nome {
   align-self: center;
 }
+ */

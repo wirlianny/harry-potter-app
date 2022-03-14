@@ -9,20 +9,12 @@
    Home
  </button>
  <button class="diretores" routerLink="/diretores" [queryParams]="{pagina:1}">Diretores</button>
- <!-- <button class="diretoresid" [routerLink]="['diretores', idDiretores.value]">Diretores com id</button> -->
  <button class="aulas" routerLink="/aulas">Aulas</button>
  <button class="quiz" routerLink="/quiz">Quiz</button>
 </mat-toolbar>
 
 <div class="container">
-  <!-- <p>Pesquisa</p><input #idDiretores> -->
      <router-outlet></router-outlet>
 
 </div>
 </body>
-
-
-
-
-
-

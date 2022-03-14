@@ -2,6 +2,7 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 10px;
+  background-color: rgb(255, 255, 255);
 }
 
 li{
@@ -18,21 +19,28 @@ ol{
   padding: 0;
 }
 
-/* .Grifinória {
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 10px;
-} */
+
 
 .resultado {
   font-family: arial;
-  font-style: italic;
+  font-style: normal;
 }
 
 .resultado .grifinoria{
   margin: 0 auto;
   max-width: 800px;
   padding: 10px;
+}
+
+.question-remain{
+  font-family:'Times New Roman', Times, serif;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.question {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }
 
 

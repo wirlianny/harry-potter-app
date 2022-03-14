@@ -1,87 +1,83 @@
 {
   "questions": [{
-          "questionText": "Which of the following does TypeScript use to specify types?",
+          "questionText": "Uma pessoa desconhecida caiu no meio do Salgão Principal na sua frente. O que você faria para ajudá-la?",
           "options": [{
-                  "text": ":",
+                  "text": "Ajuda automaticamente. Não pensaria 2x!",
                   "alternative1": true
               },
               {
-                  "text": ";",
+                  "text": "Ignora a pessoa. Ela que se levante sozinha!",
                   "alternative2": true
               },
               {
-                  "text": "!",
+                  "text": "Ajuda a pessoa! Todos merecem ajuda! Não importa quem seja!",
                   "alternative3": true
               },
               {
-                  "text": "&",
+                  "text": "Ajudaria porque um dia você também pode cair e precisar de ajuda!",
                   "alternative4": true
               }
-          ],
-          "explanation": "TS uses a colon (:) to separate the property name from the property type"
+          ]
       },
       {
-          "questionText": "Which of the following is NOT a type used in TypeScript?",
+          "questionText": "Seus amigos estão montando uma competição e te convidam. Você participaria?",
           "options": [{
-                  "text": "number",
+                  "text": "Absolutamente! Faria de tudo para entra",
                   "alternative5": true
               },
               {
-                  "text": "string",
+                  "text": "De forma alguma. Que eles participem..",
                   "alternative6": true
               },
               {
-                  "text": "boolean",
+                  "text": "Participaria e chamaria mais gente porque todos merecem participar!",
                   "alternative7": true
               },
               {
-                  "text": "enum",
+                  "text": "Sim! Porque eu teria muita chance de ganhar!",
                   "alternative8": true
               }
-          ],
-          "explanation": "enum is not used as a type in TypeScript"
+          ]
       },
       {
-          "questionText": "How can we specify properties and methods for an object in TypeScript?",
+          "questionText": "Um aluno desconhecido senta ao seu lado no trem a caminho de Hogwarts. Você falaria com ele?",
           "options": [{
-                  "text": "Use classes.",
+                  "text": "Sim. Qual seria o problema em falar!?",
                   "alternative9": true
               },
               {
-                  "text": "Use interfaces.",
+                  "text": "Jamais! Nem conheço a pessoa. Pra que perderia meu tempo falando com desconhecidos!?",
                   "alternative10": true
               },
               {
-                  "text": "Use enums.",
+                  "text": "Claro! Todos merecem a chance de ter um novo amigo!",
                   "alternative11": true
               },
               {
-                  "text": "Use async/await.",
+                  "text": "Sim. Ele poderia se tornar um novo colega e ter algum livro legal para emprestar na viagem!",
                   "alternative12": true
               }
-          ],
-          "explanation": "interfaces are typically used to list the properties and methods for an object"
+          ]
       },
       {
-          "questionText": "How else can Array<number> be written in TypeScript?",
+          "questionText": "Um (a) amigo(a) briga com você e lhe virar as costas, você:",
           "options": [{
-                  "text": "@number",
+                  "text": "Corre atrás dele e dá um chute na bunda dele (a)",
                   "alternative13": true
               },
               {
-                  "text": "number[]",
+                  "text": "Fica parado no seu canto esperando ele (a) voltar",
                   "alternative14": true
               },
               {
-                  "text": "number!",
+                  "text": "Vai embora para o dormitório magoado (a)",
                   "alternative15": true
               },
               {
-                  "text": "number?",
+                  "text": "Vai até a pessoa e pede desculpas",
                   "alternative16": true
               }
-          ],
-          "explanation": "number[] is another way of writing Array<number> in TypeScript"
+          ]
       }
 
   ]
