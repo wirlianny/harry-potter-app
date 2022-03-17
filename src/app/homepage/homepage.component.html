@@ -1,10 +1,15 @@
-
 <div class="container bg-light py-5">
   <h1 class="display-5 fw-bold">Bem-vindo a Hogwarts!</h1>
   <p class="col-md-8 fs-4">Em construção</p>
   <div class="name col-md-4 my-3">
     <label for="">Digite seu nome: </label>
-    <input #name type="text" class="form-control">
+    <input #name type="text" class="form-control" />
   </div>
-  <button class="btn btn-primary btn-lg" routerLink="/quiz" (click)="comecarChapeu()" >Chapéu Seletor</button>
+  <button
+    class="btn btn-primary btn-lg"
+    (click)="goToPage('quiz')"
+    routerLink="quiz"
+  >
+    Chapéu Seletor
+  </button>
 </div>

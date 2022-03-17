@@ -1,11 +1,8 @@
-import { QuizComponent } from './../quiz/quiz.component';
-import { NgModule } from "@angular/core";
-import { Routes } from "@angular/router";
-import { HomeComponent } from "../layout/home/home.component";
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [HomeComponent],
-  imports: []
+  declarations: [],
+  imports: [RouterModule],
 })
-
 export class HomePageModule {}

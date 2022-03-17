@@ -12,19 +12,18 @@ import { AulasComponent } from './aulas/aulas.component';
 //import { DiretoresComponent } from './diretores/diretores.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
-import { HomeComponent } from './layout/home/home.component';
+// import { HomeComponent } from './layout/home/home.component';
 import { QuizComponent } from './quiz/quiz.component';
 
-
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-    canActivate: [AuthGuard]
-  },
+  // {
+  //   path: '',
+  //   component: HomeComponent,
+  //   canActivate: [AuthGuard]
+  // },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   /* {
     path: 'diretores',
@@ -36,53 +35,50 @@ const routes: Routes = [
   }, */
   {
     path: 'aulas',
-    component: AulasComponent
+    component: AulasComponent,
   },
   {
     path: 'aulas/:id',
-    component: AulasDetalheComponent
+    component: AulasDetalheComponent,
   },
   {
     path: 'homepage',
-    component: HomepageComponent
+    component: HomepageComponent,
   },
   {
     path: 'quiz',
-    component: QuizComponent
+    component: QuizComponent,
   },
   /* {
     path: 'naoEncontrado',
     component: DiretorNaoEncontradorComponent
   }, */
 
-
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 
   {
     path: '',
     component: AuthenticationComponent,
     children: [
       {
-        path: '', redirectTo: 'login', pathMatch: 'full'
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full',
       },
       {
-        path: 'login', component: LoginComponent
+        path: 'login',
+        component: LoginComponent,
       },
       {
-        path: 'create-account', component: CreateAccountComponent
-      }
-    ]
-  }
-
-
+        path: 'create-account',
+        component: CreateAccountComponent,
+      },
+    ],
+  },
 ];
 
-
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

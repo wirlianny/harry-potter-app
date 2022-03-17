@@ -7,12 +7,16 @@
  </div>
  -->
 
-
-
-
- <div class="list-group"><br>
-  <a href="#" class="list-group-item list-group-item-action" *ngFor="let diretores of diretores" [routerLink]="['/diretores', diretores.id]" >{{diretores.nome}}</a>
+<div class="list-group">
+  <br />
+  <a
+    href="#"
+    class="list-group-item list-group-item-action"
+    *ngFor="let diretores of diretores"
+    [routerLink]="['/diretores', diretores.id]"
+    >{{ diretores.nome }}</a
+  >
+  <button class="btn-voltar btn-style" (click)="goToPage('homepage')">
+    Voltar
+  </button>
 </div>
-
-
-

@@ -12,25 +12,54 @@
   flex: 1;
   cursor: pointer;
   background-color: rgb(255, 255, 255);
-  margin: .5em;
+  margin: 0.5em;
   border-radius: 4px;
   display: flex;
   align-items: stretch;
   height: 1.8em;
-
 }
 
-.list-group-item:hover{
+.list-group-item:hover {
   color: #2c87b4;
   background-color: #e6e6e6;
-  left: .1em;
+  left: 0.1em;
 }
 
-.list-group-item:active{
+.list-group-item:active {
   background-color: #525252;
   color: #fafafa;
 }
 
+.btn-voltar {
+  font-family: arial;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+  width: 180px;
+  min-height: 0px;
+  margin-top: 50px;
+}
+.btn-style {
+  background-color: #2c87b4;
+  color: #fff;
+  box-shadow: 0 5px 0 #2377a1;
+}
+
+.btn-style:hover {
+  background: #2c87b4;
+  color: #fff;
+  box-shadow: 0 5px 0 #1a688f;
+}
+
+.btn-style:active {
+  position: relative;
+  top: 5px;
+  box-shadow: none;
+}
 
 /*
 .collection-item {
