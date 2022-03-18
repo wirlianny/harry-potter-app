@@ -1,115 +1,98 @@
-<div class="container mt-2">
-      <div class="card">
-        <div class="d-flex justify-content-between p-3">
-          <img id="chapeu" src="https://criticalhits.com.br/wp-content/uploads/2021/10/chapeu-seletor-hp.jpg" width="200" alt="logo">
-          <div class="quiz-header">
-            <h4 style="font-family:cursive;"> Seja bem-vindo (a) ao Chapéu Seletor,</h4>
-            <h3 style="font-style: italic;">{{name}}! </h3> <br>
-            <span style="font-style: normal;">Por favor, responda as 4 perguntas abaixo para realizar o sorteio!</span>
-          </div>
-        </div>
-         <ng-container *ngIf="!quizCompleted">
-          <div class="d-flex justify-content-around py-3">
-            <div class="score">
-              <h5 hidden>{{points}} Points</h5>
-            </div>
-          </div>
-        <div class="question-remain p-2">
-          <span style="font-style: italic;">Questão {{currentQuestion+1}} de {{questionList.length}}</span>
-          <div class="progress mb-3">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width': progress+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <div class="question">
-            <div class="card">
-              <h3>{{questionList[currentQuestion]?.questionText}}</h3>
-            </div>
-          </div>
-          <div class="options">
-            <ol *ngFor="let option of questionList[currentQuestion]?.options">
-              <li (click)="answer(currentQuestion+1, option)">
-                <div class="card">
-                  {{option.text}}
-                </div>
-              </li>
-            </ol>
-          </div>
-          <div class="d-flex justify-content-between">
-            <button [disabled]="currentQuestion===0" class="btn" (click)="questaoAnterior()"><i class="fa-solid fa-angle-left fa-2x"></i></button>
-            <button class="btn" (click)="resetQuestoes()"><i class="fa-solid fa-arrow-rotate-right fa-2x"></i></button>
-            <!-- <button class="btn" (click)="resetQuestoes()"><i class="fa-solid fa-arrows-rotate text-primary fa-3x" aria-hidden="true"></i>Recarregar</button> -->
-            <button [disabled]="currentQuestion===3" class="btn" (click)="proximaQuestao()"><i class="fa-solid fa-angle-right fa-2x"></i></button>
-          </div>
-        </div>
-         </ng-container>
-
-         <ng-container *ngIf="quizCompleted">
-           <div class="row d-flex justify-content-between">
-             <div class="resul text-center col-md-6 col-sm-12">
-               <h3 class="resultado">Você foi sorteado para: {{resultadoCasa()}} </h3>
-             </div>
-           </div>
-         </ng-container>
-
+<div class="container mt-3">
+  <div class="card">
+    <div class="d-flex justify-content-between p-3">
+      <img
+        id="chapeu"
+        src="https://criticalhits.com.br/wp-content/uploads/2021/10/chapeu-seletor-hp.jpg"
+        width="200"
+        alt="logo"
+      />
+      <div [ngbCollapse]="isCollapsed" class="quiz-header">
+        <h4 style="font-family: cursive">
+          Seja bem-vindo (a) ao Chapéu Seletor,
+        </h4>
+        <h3 style="font-style: italic">{{ name }}!</h3>
+        <br />
+        <span style="font-style: normal"
+          >Por favor, responda as 4 perguntas abaixo para realizar o
+          sorteio!</span
+        >
+        <br />
+        <span style="font-style: normal"
+          >Ao clicar no ícone de recarregar suas respostas serão zeradas</span
+        >
       </div>
+    </div>
+    <ng-container *ngIf="!quizCompleted">
+      <div class="d-flex justify-content-around py-3">
+        <div class="score">
+          <h5 hidden>{{ points }} Points</h5>
+        </div>
+      </div>
+      <div class="question-remain p-2">
+        <span style="font-style: italic"
+          >Questão {{ currentQuestion + 1 }} de {{ questionList.length }}</span
+        >
+        <div class="progress mb-3">
+          <div
+            class="progress-bar progress-bar-striped bg-success"
+            role="progressbar"
+            [ngStyle]="{ width: progress + '%' }"
+            aria-valuenow="25"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <div class="question">
+          <div class="card">
+            <h3>{{ questionList[currentQuestion]?.questionText }}</h3>
+          </div>
+        </div>
+        <div class="options">
+          <ol *ngFor="let option of questionList[currentQuestion]?.options">
+            <li (click)="answer(currentQuestion + 1, option)">
+              <div class="card">
+                {{ option.text }}
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="d-flex justify-content-between">
+          <button
+            [disabled]="currentQuestion === 0"
+            class="btn"
+            (click)="questaoAnterior()"
+          >
+            <i class="fa-solid fa-angle-left fa-2x"></i>
+          </button>
+          <button class="btn" (click)="resetQuestoes()">
+            <i class="fa-solid fa-arrow-rotate-right fa-2x"></i>
+          </button>
+          <!-- <button class="btn" (click)="resetQuestoes()"><i class="fa-solid fa-arrows-rotate text-primary fa-3x" aria-hidden="true"></i>Recarregar</button> -->
+          <button
+            [disabled]="currentQuestion === 3"
+            class="btn"
+            (click)="proximaQuestao()"
+          >
+            <i class="fa-solid fa-angle-right fa-2x"></i>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container class="resultado" *ngIf="quizCompleted">
+      <div class="row d-flex justify-content-between">
+        <div class="resul text-center col-md-6 col-sm-12">
+          <h3>{{ name }}, você foi sorteado (a) para {{ resultadoCasa() }}</h3>
+        </div>
+      </div>
+      <button
+        class="btn btn-primary btn-lg"
+        (click)="goToPage('homepage')"
+        routerLink="homepage"
+      >
+        Voltar
+      </button>
+    </ng-container>
   </div>
-
-
-
-<!-- <html>
-<head>
-  <title>Perguntas</title>
-  <link rel="stylesheet" type="text/scss" href="quiz.component.scss">
-  <script type="text/typescript" src="quiz.component.ts"></script>
-</head>
-<body>
-<form name="quiz" id="quiz">
-  <div class="container bg-light-blue py-5" style="font-family: cursive;">
-    <ol>
-      <li>Responda as questões de acordo com o que você acredita ser verdade.</li>
-      <li>São 4 questões para que o Chapéu Seletor sortei você a uma casa.</li>
-      <li>Recarregar a página irá resertar suas respostas. Cuidado!</li>
-    </ol>
-  </div>
-
-  <div>
-    <p>1. Pergunta?</p>
-    <p><input type="radio" name="question1" id="a1" value="1" ngModel>A.1</p>
-    <p><input type="radio" name="question1" id="b1" value="2" ngModel>B.2</p>
-    <p><input type="radio" name="question1" id ="c1" value="3" ngModel>C.3</p>
-    <p><input type="radio" name="question1" id="d1 "value="4" ngModel>D.4</p>
-  </div>
-
-  <div>
-    <p>2. Pergunta?</p>
-    <p><input type="radio" name="question2" id="a2" value="5" ngModel>A.5</p>
-    <p><input type="radio" name="question2" id="b2" value="6" ngModel>B.6</p>
-    <p><input type="radio" name="question2" id="c2" value="7" ngModel>C.7</p>
-    <p><input type="radio" name="question2" id="d2" value="8" ngModel>D.8</p>
-  </div>
-
-  <div>
-    <p>3. Pergunta?</p>
-    <p><input type="radio" name="question3" id="a3" value="9" ngModel>A.9</p>
-    <p><input type="radio" name="question3" id="b3" value="10" ngModel>B.10</p>
-    <p><input type="radio" name="question3" id ="c3" value="11" ngModel>C.11</p>
-    <p><input type="radio" name="question3" id="d3" value="12" ngModel>D.13</p>
-  </div>
-
-  <div>
-    <p>4. Pergunta?</p>
-    <p><input type="radio" name="question4" id="a4"  value="14" ngModel>A.14</p>
-    <p><input type="radio" name="question4" id="b4" value="15" ngModel>B.15</p>
-    <p><input type="radio" name="question4" id="c4" value="16" ngModel>C.16</p>
-    <p><input type="radio" name="question4" id="d4" value="17" ngModel>D.18</p>
-  </div>
-
-
-
-  <input type="submit" name="" value="Chapéu Seletor" id="button" (click)="check()">
-</form>
-
-<p id="result"></p>
-</body>
-</html>
-
- -->
+</div>

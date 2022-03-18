@@ -1,48 +1,70 @@
-.card{
+.card {
   max-width: 800px;
   margin: 0 auto;
   padding: 10px;
   background-color: rgb(255, 255, 255);
 }
 
-li{
+li {
   list-style-type: none;
   cursor: pointer;
   margin: 10px 0;
 }
 
-li .card:hover{
+li .card:hover {
   border: 1px solid blue;
 }
 
-ol{
+ol {
   padding: 0;
 }
-
-
 
 .resultado {
   font-family: arial;
   font-style: normal;
 }
 
-.resultado .grifinoria{
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 10px;
-}
-
-.question-remain{
-  font-family:'Times New Roman', Times, serif;
+.question-remain {
+  font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-size: 18px;
 }
 
 .question {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-style: italic;
 }
 
+.resultado2 {
+  text-align: justify;
+  width: auto;
+  text-transform: capitalize;
+  font-style: normal;
+  background-size: auto;
+  top: -10px;
+}
+
+.btn {
+  font-size: 15px;
+  font-family: Arial;
+  width: 140px;
+  height: 50px;
+  border-width: 1px;
+  color: #ffffff;
+  border-color: #337fed;
+  font-weight: bold;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: inset 0px 1px 0px 0px #97c4fe;
+  text-shadow: inset 0px 1px 0px #1570cd;
+  background: linear-gradient(#3d94f6, #1e62d0);
+}
+
+.btn:hover {
+  background: linear-gradient(#1e62d0, #3d94f6);
+}
 
 /* body{
   background-color: lightgoldenrodyellow;
