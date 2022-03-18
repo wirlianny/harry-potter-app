@@ -17,14 +17,14 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
 import { QuizComponent } from './quiz/quiz.component';
 
 const routes: Routes = [
-  {
-    path: '',
+  /* {
+    path: 'homepage',
     component: HomePageModule,
-  },
-  {
+  }, */
+  /* {
     path: 'login',
     component: LoginComponent,
-  },
+  }, */
   /* {
     path: 'diretores',
     component: DiretoresComponent
@@ -54,7 +54,7 @@ const routes: Routes = [
     component: DiretorNaoEncontradorComponent
   }, */
 
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'homepage', pathMatch: 'full' },
 
   {
     path: '',
