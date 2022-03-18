@@ -1,27 +1,24 @@
 .body {
-  background-image: url(../assets/Hogwarts.webp);
+  background-image: url(../assets/fundopreto.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-color: white;
+  height: 100%;
 }
-
-
 
 .mat-toolbar {
-  background: rgba(0,0,0,.6);
-
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.loginbtn{
+.loginbtn {
   font-style: normal;
   font-family: arial;
   margin: 15px;
   font-size: 15px;
-
 }
 
-.home{
+.home {
   font-style: normal;
   font-family: arial;
   margin: 15px;
@@ -33,7 +30,6 @@
   font-family: arial;
   margin: 15px;
   font-size: 15px;
-
 }
 
 .aulas {
@@ -41,7 +37,6 @@
   font-family: arial;
   margin: 15px;
   font-size: 15px;
-
 }
 
 .alunos {

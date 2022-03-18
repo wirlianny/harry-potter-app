@@ -1,3 +1,4 @@
+import { HomePageModule } from './homepage/homepage.module';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,11 +17,10 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
 import { QuizComponent } from './quiz/quiz.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: HomeComponent,
-  //   canActivate: [AuthGuard]
-  // },
+  {
+    path: '',
+    component: HomePageModule,
+  },
   {
     path: 'login',
     component: LoginComponent,

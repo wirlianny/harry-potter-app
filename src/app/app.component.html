@@ -1,13 +1,10 @@
 <body class="body">
   <mat-toolbar color="primary">
-    <!-- <button class="loginbtn" routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    Login
- </button> -->
-
     <span class="example-spacer"></span>
     <button
       class="home"
       routerLink="/homepage"
+      [queryParams]="{ pagina: 1 }"
       mat-icon
       aria-hidden="false"
       aria-label="Example home icon"
@@ -17,12 +14,16 @@
     <button
       class="diretores"
       routerLink="/diretores"
-      [queryParams]="{ pagina: 1 }"
+      [queryParams]="{ pagina: 2 }"
     >
       Diretores
     </button>
-    <button class="aulas" routerLink="/aulas">Aulas</button>
-    <button class="quiz" routerLink="/quiz">Quiz</button>
+    <button class="aulas" routerLink="/aulas" [queryParams]="{ pagina: 3 }">
+      Aulas
+    </button>
+    <button class="quiz" routerLink="/quiz" [queryParams]="{ pagina: 4 }">
+      Quiz
+    </button>
   </mat-toolbar>
 
   <div class="container">
